@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'doses/new'
-  get 'doses/creat'
+  get 'doses/create'
   get 'cocktails/index'
   get 'cocktails/show'
   get 'cocktails/new'
@@ -11,4 +11,5 @@ Rails.application.routes.draw do
     resources :doses, only: [:new, :create]
   end
   root to: 'cocktails#index'
+  resources :doses, only: [:destroy]
 end
