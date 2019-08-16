@@ -1,5 +1,7 @@
 
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'wiski.jpg' %>');">
+  <%= cl_image_tag("a3hyndb4hyse5qsuitsb.jpg",
+      width: 400, height: 300, crop: :fill) %>
   <div class="banner-content">
     <h1>Cocktails</h1>
     <p>Try the cocktails</p>
@@ -13,6 +15,7 @@
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
           <div class="card-description">
             <h2><%= cocktail.name %></h2>
+
           </div>
           <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
         </div>
